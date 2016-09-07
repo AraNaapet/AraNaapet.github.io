@@ -11,6 +11,15 @@ body {
     position: relative;
     width: 100%;
 }
+.sky {
+    animation: 15s linear 0s normal none infinite running sky;
+    background: steelblue none repeat scroll 0 0;
+    box-shadow: 0 -400px 300px -300px orangered inset;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
 .herb {
     background: rgba(0, 0, 0, 0) url("http://img-fotki.yandex.ru/get/5000/5091629.98/0_7a92d_7ece70d7_XL.png") no-repeat scroll center bottom;
     bottom: 0;
