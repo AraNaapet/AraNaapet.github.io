@@ -39,4 +39,43 @@ body {
     width: 10em;
 }
 
+@keyframes move {
+0% {
+}
+10% {
+    margin-left: -4.5em;
+}
+20% {
+    margin-left: -5.5em;
+}
+30% {
+    margin-left: -6em;
+}
+40% {
+    margin-left: -4.5em;
+}
+50% {
+    bottom: 75%;
+    height: 5em;
+    left: 50%;
+    margin-left: -2.5em;
+    width: 5em;
+}
+60% {
+    margin-left: 1.5em;
+}
+70% {
+    margin-left: 3.5em;
+}
+80% {
+    margin-left: 2.5em;
+}
+90% {
+    margin-left: 1em;
+}
+100% {
+    left: 98%;
+    margin-left: -2.5em;
+}
+
 
