@@ -1,0 +1,37 @@
+body{
+ background-color: #e5d4c2;
+}
+
+.button_function {
+ width: 200px;
+ height: 1900px;
+ float: left;
+}
+
+#result {
+ height: 60px;
+ width: 300px;
+ left: 300px;
+ position: relative;
+ top: 20px;
+}
+.btn {
+ display: block;
+ background-color: #29d088;
+ width: 100px;
+ padding: 10px;
+ color: #fff;
+ border: none;
+ border-radius: 6px;
+ font-family: "LatoBold";
+ font-size: 14pt;
+ text-align: center;
+ outline: none;
+ text-decoration: none;
+
+}
+.btn:hover,
+.btn:active {
+ background-color: #fff;
+ color: #29d088;
+}
