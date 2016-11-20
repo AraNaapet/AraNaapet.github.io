@@ -40,3 +40,14 @@ $(function() {
         }
     });
 });
+function addContacts() {
+  var email1 = document.getElementById("email").value;
+  
+  if (email1 == "araflashe@gmail.com" || email1 == "Ара Наапетян" || {
+    var resultUsersSection = document.getElementById("resultUsers");
+    resultUsersSection.hidden = false;
+    resultUsersSection.innerHTML = resultUsersSection.innerHTML + "<br>" + email1;
+  } else {
+    alert("");
+  }
+}

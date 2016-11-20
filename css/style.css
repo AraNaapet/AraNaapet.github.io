@@ -545,7 +545,7 @@ a.banner-btn{
 /*----*/
 .content-bottom-left{
 	background:#E2F8FF;
-	padding: 6em 0px;
+	padding: 5.3% 0px;
  }
 .content-bottom-right {
 	background: #F5F9EB;
@@ -773,6 +773,11 @@ img.david{
 }
 .bottom-community-left {
 	padding: 1.5em 8em;
+	display: flex;
+	display: -webkit-flex; /* Safari */
+	 -webkit-flex-grow: 0; /* Safari 6.1+ */
+    -webkit-flex-shrink: 0; /* Safari 6.1+ */
+     flex-grow: 0;
 }
 
 img.white{
@@ -1083,6 +1088,7 @@ margin: 1em 0px 1em 0px;
 }
 .bottom-community-bottom-left {
 	padding: 1em 1em;
+	display: flex;
 }	
 .slide-text-info h1 {
 	font-size: 1.5em;
