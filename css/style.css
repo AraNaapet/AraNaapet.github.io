@@ -545,11 +545,11 @@ a.banner-btn{
 /*----*/
 .content-bottom-left{
 	background:#E2F8FF;
-	padding: 5.3% 0px;
+	padding: 100px 0px;
  }
 .content-bottom-right {
 	background: #F5F9EB;
-	padding: 6em 0px;
+	padding: 100px 0px;
 }
  .content-bottom-left-head h5,.content-bottom-right-head h5{
 	font-size:2em;
@@ -564,7 +564,7 @@ a.banner-btn{
 	line-height: 32px;
  }
  .content-bottom-right-head p{
- 		width:52%
+ 		width:50%
  }
  .content-bottom-left-head a,.content-bottom-right-head a{
 	font-size:1.2em;
