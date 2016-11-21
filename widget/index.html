@@ -21,7 +21,6 @@
       <script src="js/bootstrap.min.js"></script>
       <script src="js/shares.js"></script>
       <script src="js/mail.js"></script>
-      <script src="js/profile.js"></script>
    </head>
    <body>
       <div class="container">
@@ -33,18 +32,17 @@
                   <li class="menu_first"><span class="icon-menu_01"></span><a href="#">Check&nbsp;in<span class="count">3</span></a></li>
                   <li><span class="icon-menu_02"></span><a href="#">Events</a>
                     <ul class="submenu">
-                      <li><a href=#>Friends</a></li>
-                      <li><a href=#>Relatives<!--span class="submenu_arrow">></span--></a>
-                      </li>
-                      <li><a href=#>Learning</a></li>
+                      <li><a href=#><span>Friends</span></a></li>
+                      <li><a href=#><span>Relatives</span></a></li>
+                      <li><a class="submenu_last" href=#><span>Learning</span></a></li>
                     </ul>
                   </li>
                   <li><span class="icon-menu_03"></span><a href="#">Account</a>
                     <ul class="submenu">
-                      <li><a href=#>My page</a></li>
-                      <li><a href=#>News</a></li>
-                      <li><a href=#>Music</a></li>
-                      <li><a href=#>Photos</a></li>
+                      <li><a href=#><span>My page</span></a></li>
+                      <li><a href=#><span>News</span></a></li>
+                      <li><a href=#><span><span>Music</span></a></li>
+                      <li><a class="submenu_last" href=#><span>Photos</span></a></li>
                     </ul>
                   </li>
                   <li class="menu_last"><span class="icon-menu_04"></span><a href="#">Settings</a></li>
@@ -68,7 +66,7 @@
                     <div id="graph"></div>
                   </div>
                   <div class="shares_data">
-                    <div class="shares_data_dynamics"><a href="#">show the dynamics</a></div>
+                    <div class="shares_data_dynamics"><a href="#" onclick="processCharts(this);">show the dynamics</a></div>
                     <div class="shares_data_time">Today 2:25 PM</div>
                     <div class="shares_data_place">Salt Lake City, Utah</div>
                     
@@ -194,15 +192,30 @@
 
                         </div>
                         <div class="tab-pane fade" id="month">
-                            <div class="tab_content_name">Data chart</div>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa iste facilis dignissimos nostrum, laudantium eos eveniet architecto blanditiis temporibus eius alias? Sit ipsa laudantium optio amet quo tempore doloremque cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit excepturi maiores consequuntur facere non sint assumenda repellendus aut sunt, doloremque eos est magni quis quaerat, dolorum praesentium minus, nemo repellat!</p>
-
-                            <ul class="tab_content_statistic_data clearfix">
-                                <li><div class="diagram_statistic_data"><span>audio</span><strong>33%</strong></div></li>
-                                <li class="red"><div class="diagram_statistic_data"><span>video</span><strong>43%</strong></div></li>
-                                <li class="yellow"><div class="diagram_statistic_data"><span>photo</span><strong>9%</strong></div></li>
-                            </ul>
+                            <div class="tab_content_name">disk space usage <br>per month</div>
+                              <div class="graph__wrapper">
+                                <div class="coordinates">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span> 
+                                </div>
+                                  <svg width="280px" height="107px" viewBox="0 0 315 107" version="1.1">
+                                    <defs>
+                                        <linearGradient x1="0%" y1="100%" x2="100%" y2="100%" id="linearGradient-1">
+                                            <stop stop-color="#2090F8" offset="0%"></stop>
+                                            <stop stop-color="red" offset="50%"></stop>
+                                            <stop stop-color="red" offset="60%"></stop>
+                                            <stop stop-color="#2090F8" offset="100%"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                                        <path d="M1.1,95 L30,68 L35,81 L45,76 L56,86 L80,19 L92,23 L123,2 L151,22 L164,32 L174,43 L194,63 L217,68 L232,84" id="Path-1" stroke="url(#linearGradient-1)" stroke-width="4" sketch:type="MSShapeGroup" class="path"></path>
+                                    </g>
+                                </svg>
+                              </div>
                             <ul class="tab_content_statistic_links clearfix">
                                 <li><a href="#"><span class="icon-diagram_01"></span><br /><span class="diagram_statistic_button_name">upload files</span></a></li>
                                 <li><a href="#"><span class="icon-diagram_02"></span><br /><span class="diagram_statistic_button_name">share link</span></a></li>
@@ -290,27 +303,26 @@
               </div>
                <!-- /// MAIL WIDGET /// -->
               <div id="mail-widget" class="panel mail">
-                <div class="mail_form">
-                  <form action="Post">
+                <form method="post" action="mail_function">
+                  <div class="mail_form">
                     <label for="email" class="mail_form_text">
                       Contact
                     </label>
                     <div class="mail_form_input">
-                       <input id="email" type="text" placeholder="Helo@me.com Andy@me.com">  <button onclick="addContacts();return false;" id="add_contacts">+</button>
-
+                        <input id="email" type="text" placeholder="Email or Name"><button onclick="addContacts();return false;" id="add_contacts">+</button>
                     </div>
                     <label for="email" class="mail_form_text">
                       Subject
                     </label>
                     <div class="mail_form_input">
-                       <input id="subject" type="subject" placeholder="You can add a subject">
+                       <input id="subject" type="text" placeholder="You can add a subject">
                     </div>
-                    <label for="msg" class="mail_form_text">
+                    <label class="mail_form_text">
                       Message
                     </label>
                     <div class="mail_form_input">
-                      <textarea type="text" placeholder="Leave you message here"></textarea>
-                      <div id="resultUsers" hidden="true"><span class="mail_form_added">Added:</span></div>
+                      <textarea placeholder="Leave you message here"></textarea>
+                      <div id="resultUsers" hidden><span class="mail_form_added">Added:</span></div>
                     </div>
                   </div>
                   <div class="mail_form_footer">
@@ -324,9 +336,8 @@
                   </div>
                   </form>
                </div>
-               </div>
             </div>
-         </div>
+          </div>
       </div>
-   </body>
+  </body>
 </html>

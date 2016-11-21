@@ -77,7 +77,14 @@
 [class^="user_data_menu_content"]:hover > [class^="icon-user_"] {
     color: #e55f3b;
 }
+[class^="user_data_menu_content"]:focus > [class^="icon-user_"] {
+    color: #e55f3b;
+}
 [class^="user_data_menu_content"]:hover > .user_data_menu_content_text {
+    margin-left: -3px;
+    color: #7d7266;
+}
+[class^="user_data_menu_content"]:focus > .user_data_menu_content_text {
     margin-left: -3px;
     color: #7d7266;
 }

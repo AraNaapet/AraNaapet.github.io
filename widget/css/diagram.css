@@ -190,3 +190,51 @@
     margin-top: -160px;
     color: #8a786a;
 }
+.graph__wrapper {
+    width: 300px;
+  position: relative;
+  padding: 60px 80px 120px 40px;
+  margin: 0 auto;
+  
+}
+.graph__wrapper svg {
+  margin: 30px 0px 0px 15px;
+}
+.coordinates {
+  position: absolute;
+  counter-reset: line 700;
+}
+.coordinates span {
+  display: inline-block;
+  border-bottom: 1px solid #b0b0b0;
+  height: 20px;
+  width: 230px;
+}
+.coordinates span:before {
+  counter-increment: line -100;
+  content: counter(line);
+  display: inline-block;
+  color: #b0b0b0;
+  margin: 10px 0px 0px -30px;
+}
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash 3s ease-in forwards;
+          animation: dash 3s ease-in forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+          width: 280px;
+}
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
